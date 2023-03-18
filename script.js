@@ -41,3 +41,4 @@ document.getElementById("checkbox").onclick = function() {
   })
 
   ScrollReveal().reveal('.about', { delay: 600, duration: 1500 });
+  ScrollReveal().reveal('.fox', { delay: 600, duration: 1500 });

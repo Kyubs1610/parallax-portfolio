@@ -51,18 +51,46 @@ header ul{
 }
 
 header ul li a{
-    color: white;
-    text-decoration: none;
+    
+    
     font-size: 1.5rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-    margin: auto 3rem ;
+    
+  text-decoration: none;
+  margin: auto 3rem ; 
+  --b: 0.1em;   /* the thickness of the line */
+  --c: #ffffff; /* the color */
+  
+  color: #fcfbfb;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#000000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
 }
 
-header ul li a:hover{
+
+.sec h2{
+  --b: 0.1em;   /* the thickness of the line */
+  --c: #ffffff; /* the color */
+  
+  
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#000000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+
+header ul li a:hover, .sec h2:hover{
     
-    color: black;
-    padding: 0.5rem;
+  --_p: 100%;
+  --_s: .3s;
+    
 }
 
 section{
@@ -70,6 +98,8 @@ section{
   width:100dvw;
   position: relative;
   display: flex;
+}
+.home{
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -92,7 +122,7 @@ section::before{
 }
 
 
-section img{
+.home img{
   position: absolute;
   top: 0;
   left: 0;
@@ -112,7 +142,7 @@ section img{
   
 }
 
-.bird{
+section .bird{
   position: absolute;
   top: 20%;
   width: 30dvw;
@@ -120,7 +150,7 @@ section img{
   object-fit: cover;
   z-index: 9;
 }
-.moon, .star{
+.moon{
   display:none;
 }
 
@@ -130,41 +160,38 @@ section .tree{
 .sec {
   position:relative;
   background-color: #33100E;
-    
+  
 }
 .sec h2{
   font-size: 3rem;
   color: #fff;
+  margin: 1rem 0;
   
  }
+
+ 
 .sec p{
   font-size: 1.5rem;
   color: #fff;
   margin: 1rem 0;
-  text:nowrap;
- }
+  
+  }
+ 
 
- .about{
-  display:flex;
+ .about, .fox{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: rgba( 255, 255, 255, 0.35 );
-  box-shadow: 0 8px 32px 0 ;
-  backdrop-filter: blur( 8px );
-  -webkit-backdrop-filter: blur( 8px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  width:70%;
-  padding: 1rem;
-  background-image: url("./Assets/images/polyfox.png");
-  background-repeat: no-repeat;
-  background-size: 15%;
-  background-position: 5% 55%;
+  width: 60%;
+  margin: auto;
+  
  }
-
-
-
+ .fox{
+  width: 200px;
+  height: 200px;
+  
+ }
 
   /* The switch - the box around the slider */
 .switch {
