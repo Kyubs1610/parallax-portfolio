@@ -17,11 +17,10 @@ body{
 }
 
 header{
-  position:absolute;
+  position:sticky;
   top: 0;
   left: 0;
   width: 100dvw;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-self: center;
@@ -92,6 +91,7 @@ header ul li a:hover, .sec h2:hover{
   --_s: .3s;
     
 }
+
 
 section{
   height:100vh;
