@@ -5,7 +5,7 @@
     let sun = document.querySelector(".background");
     let body = document.querySelector("body");
     let cursor = document.querySelector(".cursor");
-    let about = document.querySelector(".about");
+    let about = document.querySelector(".light");
     let treenight = document.querySelector(".treenight");
     let tree = document.querySelector(".tree");
   
@@ -66,11 +66,13 @@
   })
 
  // Scroll reveal animation for the 2nd section 
-  ScrollReveal().reveal('.about h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500 });
+  ScrollReveal().reveal('.light h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500 });
+  ScrollReveal().reveal('.buttoncv',  { origin:'left',distance:'600px',delay: 1200, duration: 1500 });
   ScrollReveal().reveal('.work h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500 });
   ScrollReveal().reveal('.contactme h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500 });
-  ScrollReveal().reveal('.about p', {origin:'right', distance:'300px',delay: 1000, duration: 1500 });
+  ScrollReveal().reveal('.about p', {origin:'right', distance:'500px',delay: 1000, duration: 1500 });
   ScrollReveal().reveal('.container', { delay: 600, duration: 1500 });
+
  
 // Spot light effect on the dark mode
   const cursor = document.querySelector('.cursor');
@@ -102,4 +104,5 @@ portfolioCloseBtns.forEach((portfolioCloseBtn) => {
         });
     });
 });
+
 
