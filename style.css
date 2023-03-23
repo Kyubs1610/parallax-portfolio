@@ -17,7 +17,7 @@ body{
 }
 
 header{
-  position:sticky;
+ position: relative;
   top: 0;
   left: 0;
   width: 100dvw;
@@ -25,6 +25,7 @@ header{
   justify-content: space-between;
   align-self: center;
   z-index: 2000000;
+ 
 }
 
 header .switch{
@@ -50,16 +51,12 @@ header ul{
 }
 
 header ul li a{
-    
-    
     font-size: 1.5rem;
     font-weight: 500;
-    
   text-decoration: none;
   margin: auto 3rem ; 
   --b: 0.1em;   /* the thickness of the line */
   --c: #ffffff; /* the color */
-  
   color: #fcfbfb;
   padding-block: var(--b);
   background: 
@@ -71,11 +68,9 @@ header ul li a{
 }
 
 
-.sec h2{
+.sec h2, .work h2, .contactme h2{
   --b: 0.1em;   /* the thickness of the line */
   --c: #ffffff; /* the color */
-  
-  
   padding-block: var(--b);
   background: 
     linear-gradient(var(--c) 50%,#000000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
@@ -85,11 +80,9 @@ header ul li a{
   transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
 }
 
-header ul li a:hover, .sec h2:hover{
-    
+header ul li a:hover{
   --_p: 100%;
   --_s: .3s;
-    
 }
 
 
@@ -106,8 +99,10 @@ section{
   transform-style: preserve-3d;
 }
 
+
+
 /* Transition effect betwen 1st and 2nd section */
-section::before{
+.home::before{
   content: "";
   position: absolute;
   bottom:0;
@@ -117,8 +112,8 @@ section::before{
   z-index: 10000;
 }
 
-.dark-mode section::before{
-  background: linear-gradient(to top, #171717, transparent);
+.dark-mode .home::before{
+  background: linear-gradient(to top, #03000B, transparent);
 }
 
 
@@ -127,10 +122,12 @@ section::before{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100vh;
+  
   z-index: -1;
 }
+
+
 
 .title{
   position: absolute;
@@ -150,35 +147,33 @@ section .bird{
   object-fit: cover;
   z-index: 9;
 }
-.moon{
+.moon, .treenight{
   display:none;
 }
 
-section .tree{
+section .tree, section .treenight{
   z-index: 10;
 }
 .sec {
   position:relative;
   background-color: #33100E;
-  
-}
-.sec h2{
+  }
+.sec h2, .work h2, .contactme h2{
   font-size: 3rem;
   color: #fff;
   margin: 1rem 0;
   
  }
 
- 
 .sec p{
   font-size: 1.5rem;
   color: #fff;
-  margin: 1rem 0;
+  margin: auto;
   
   }
  
 
- .about, .fox{
+ .about, .work, .contactme{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,11 +182,35 @@ section .tree{
   margin: auto;
   
  }
- .fox{
-  width: 200px;
-  height: 200px;
-  
+ .cursor{
+  display: none;
  }
+
+ .cursor{
+  position:fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.1s;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  }
+
+.about:hover ~ .cursor {
+transform: scale(6);
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+
+  
+}
 
   /* The switch - the box around the slider */
 .switch {
@@ -257,3 +276,151 @@ section .tree{
   .slider.round:before {
     border-radius: 50%;
   }
+
+  /* WORK SECTION */
+
+.portfolio .container .content {
+    width: 100%;
+}
+
+.portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    max-width: 100%;
+    gap: 35px; 
+    margin: 0 auto;
+    
+}
+
+
+
+.portfolio-list .img-card {
+    position: relative;
+    height: 260px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    cursor: pointer;
+   
+    
+}
+.portfolio-list .img-card img{
+ max-width: 100%;
+ margin: auto;
+ object-position: center;
+}
+.portfolio-list .img-card .devfinder{
+  max-width: 150%;
+  height: 100%;
+  
+ }
+ a{
+  text-decoration: none;
+  color: #fff;
+ }
+
+.portfolio-list .img-card .overlay {
+    transition: 1s ease;
+    
+}
+
+.portfolio-list .img-card:hover .overlay {
+    z-index: 777;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    
+}
+
+.portfolio-list .img-card .info {
+    z-index: 777;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    color: #fff;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.5s ease;
+    
+}
+
+.portfolio-list .img-card:hover .info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-list .img-card .info h3 {
+    font-size: 1.5em;
+}
+
+.portfolio-list .img-card .info span {
+    font-size: 1.2em;
+}
+
+
+.portfolio-model {
+    z-index: 999999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: var(--transparent-color-01);
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-model.active {
+    visibility: visible;
+    opacity: 1;
+}
+.portfolio-model-body {
+    position: relative;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 1rem;
+    transform: translateY(-50px);
+    transition: 0.5s ease;
+    color:#ffffff;
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border-radius: 10px;
+}
+
+
+
+.portfolio-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.portfolio-model-body h3 {
+    font-size: 1.5em;
+}
+
+.portfolio-model-body img {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.portfolio-model-body video {
+  width: 100%;
+  margin: 20px 0;
+  
+}
+

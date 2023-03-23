@@ -8,9 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Portfolio</title>
 </head>
 <body>
+  
         <header> 
           <label class="switch">
             <input type="checkbox" id="checkbox">
@@ -19,43 +21,97 @@
             <ul>
                 <li><a href='#'>Home</a></li>
                 <li><a href='#sec'>About</a></li>
-                <li><a href='#work'>Work </a></li>
-                <li><a href='#contact'>Contact </a></li>
+                <li><a href='#sec3'>Work </a></li>
+                <li><a href='#contactme'>Contact </a></li>
            </ul>
         </header>
         
         <section class='dark-mode home'>
-                <img src="./Assets/images/sun.png" class="background">
+                
+                <img src="./Assets/images/Japanesebg.png" class="background">
                 <img src="./Assets/images/bird.png" class="bird">
-                <img src="./Assets/images/moon2.png" class="moon">
+                <img src="./Assets/images/Japanesebgnight.png" class="moon">
                 <h2 class="title">Hello, I'm Diego</h2>  
-                <img src="./Assets/images/tree.png" class="tree">
+                <img src="./Assets/images/jptree.png" class="tree">
+                <img src="./Assets/images/jptreenight.png" class="treenight">
+                
         </section> 
+        
         <section class="sec" id="sec">
-          
-          
+         
           <div class="about" id="about">
             <h2> About Me</h2> 
            <p>
-            Former hotelier, I decided to reorient myself in the IT sector.
-            I am currently following a training course in web development.
-            My goal after my training is to become a front-end developer
-            and keep learning on this branch.
+            I recently transitioned from a 10-year career in hospitality to pursue my passion for web development and design. I'm a CSS enthusiast who loves using my creativity to build beautiful and functional websites and web applications.
           </p>
           
           </div> 
-          <img src="./Assets/images/polyfox.png" class="fox"> 
           
+          <div class="cursor"></div>
           </section>
 
-          <section>
-            <div class="work" id="work">
-            </div> 
+          <section id="sec3">
+            
+            <div class="work">
+              <h2> Work </h2><br><br><br>
+              <div class="content">
+                <div class="portfolio-list"> 
+                <div class="img-card-container">
+                  <div class="img-card">
+                      <div class="overlay"></div>
+                      <div class="info">
+                          <h3>Decktopia</h3>
+                          <span>Pack opening</span>
+                      </div>
+                      <img src="./Assets/images/Decktopia.png" alt="Decktopia">
+                  </div>
+
+                  <div class="portfolio-model">
+                      <div class="portfolio-model-body">
+                          <i class="fas fa-times portfolio-close-btn"></i>
+                          <h3>Decktopia</h3>
+                          <video src="./Assets/images/screen-capture (1).webm" class="video" autoplay loop muted></video>
+
+                          <p>A place where players open packs and make their own collection</p>
+                          <a href="https://github.com/Kyubs1610/Decktopia-Back" target="_blank"> &#128279 Github Repo</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="img-card-container">
+                <div class="img-card">
+                    <div class="overlay"></div>
+                    <div class="info">
+                        <h3>Dev Finder</h3>
+                        <span>Find your favorite dev </span>
+                    </div>
+                    <img class="devfinder" src="./Assets/images/devfinder.png" alt="Devfinder">
+                    
+                </div>
+
+                <div class="portfolio-model flex-center">
+                    <div class="portfolio-model-body">
+                        <i class="fas fa-times portfolio-close-btn"></i>
+                        <h3>Dev Finder</h3>
+                        <video src="./Assets/images/devfinder.webm" class="video" autoplay loop muted></video>
+                        <p>Responsive website based on the API of Github</p>
+                        <a href="https://github.com/Kyubs1610/DevFinder" target="_blank"> &#128279 Github Repo</a>
+                    </div>
+                </div>
+            </div>
+            
+                
+              </div>
+            </div>
+             
           </section>
           <section>
-            <div class="contact" id="contact">
-            </div> 
-          </section>  
+            <div class="contactme" id="contactme" >
+              <h2> Contact Me</h2>
+              <p>fversgfresgr</p>
+            </div>
+             
+          </section> 
+           
         </div>
  
   <script src="https://unpkg.com/scrollreveal"></script>
