@@ -13,7 +13,12 @@ body{
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-   
+       
+}
+
+::-webkit-scrollbar{
+  width: 0;
+
 }
 
 header{
@@ -69,15 +74,6 @@ header ul li a{
 
 
 .sec h2, .work h2, .contactme h2{
-  --b: 0.1em;   /* the thickness of the line */
-  --c: #ffffff; /* the color */
-  padding-block: var(--b);
-  background: 
-    linear-gradient(var(--c) 50%,#000000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-  -webkit-background-clip: text,padding-box;
-          background-clip: text,padding-box;
-  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
   font-size: 3rem;
   color: #fff;
   margin: 1rem 0;
@@ -126,11 +122,8 @@ section{
   left: 0;
   width: 100%;
   height: 100vh;
-  
   z-index: -1;
 }
-
-
 
 .title{
   position: absolute;
@@ -181,7 +174,7 @@ section .tree, section .treenight{
 
  button{
   background-color: #fff;
-  color: #000;
+  color: #000000;
   padding: 0.5rem;
   margin: 1rem;
   border: none; 
@@ -192,6 +185,12 @@ button:hover{
  background-color: transparent;
  color: #fff;
  box-shadow: #fff 0 0 10px;
+ fill: #fff;
+}
+
+button a:hover{
+  color: #fff;
+  fill: #fff;
 }
 
  .cursor{
@@ -220,6 +219,15 @@ transform: scale(6);
   width: 100%;
   height: 50%;
 }
+
+.buttoncv{
+  font-size: 1.2rem;
+  pointer-events: visible;
+  cursor:pointer;
+
+}
+
+
   /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -324,9 +332,15 @@ transform: scale(6);
  }
  a{
   text-decoration: none;
-  color: #fff;
+  
  }
 
+a:visited{
+  color: white;
+}
+a:hover{
+  color: white;
+}
 .portfolio-list .img-card .overlay {
     transition: 1s ease;
     
@@ -441,8 +455,14 @@ transform: scale(6);
   top: 0;
   left: 0;
   bottom: 0;
+  }
+
+.navbutton.none{
+  display: none;
   
 }
+
+
 .navbutton button:hover svg {
   fill: #fff;
 }

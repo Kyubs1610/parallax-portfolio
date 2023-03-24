@@ -72,6 +72,8 @@
   ScrollReveal().reveal('.contactme h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500 });
   ScrollReveal().reveal('.about p', {origin:'right', distance:'500px',delay: 1000, duration: 1500 });
   ScrollReveal().reveal('.container', { delay: 600, duration: 1500 });
+  ScrollReveal().reveal('footer', { origin:'bottom', delay: 600, duration: 1500 });
+  
 
  
 // Spot light effect on the dark mode
@@ -104,5 +106,28 @@ portfolioCloseBtns.forEach((portfolioCloseBtn) => {
         });
     });
 });
+
+
+// Navigation button when scrolling down doesn't appear on the first section
+
+const navButton = document.querySelector(".navbutton");
+const firstSection = document.querySelector(".dark-mode.home");
+
+navButton.style.transition = "opacity 0.7s ease-out 0.7s";
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 500 && !firstSection.contains(event.target)) {
+        navButton.classList.remove("none");
+        window.getComputedStyle(navButton).opacity; /* trigger a reflow to apply the transition */
+        navButton.style.opacity = "1";
+        
+    } else {
+        navButton.classList.add("none");
+        window.getComputedStyle(navButton).opacity; /* trigger a reflow to apply the transition */
+        navButton.style.opacity = "0";
+
+    }
+});
+
 
 
