@@ -151,7 +151,6 @@ section .tree, section .treenight{
   z-index: 10;
 }
 .sec {
-  
   background-color: #33100E;
   }
 .sec p{
@@ -169,6 +168,7 @@ section .tree, section .treenight{
   align-items: center;
   width: 60%;
   margin: auto;
+  
   
  }
  body:not(.dark-mode) button.night-mode {
@@ -489,17 +489,26 @@ a:hover{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: rgba( 0, 0, 0, 0.25 );
+  box-shadow: 0 4px 16px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 100%;
+ 
+  
 }
 input, 
 textarea {
-  width: 300%;
+  width: 90%;
   background-color: transparent;
   color: #fff;
   letter-spacing: 1px;
-  margin: 5px 0;
-  padding: 10px;
+  margin: 20px ;
+  padding: 10px 10px;
   resize: none;
-  
+ 
 }
 
 footer{
@@ -516,6 +525,14 @@ footer{
   background: rgba( 255, 255, 255, 0.15 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 12.5px );
+  -webkit-backdrop-filter: blur( 12.5px );
+  border: 1px rgba( 255, 255, 255, 0.18 );
+}
+header{
+  position: fixed;
+  padding: 2rem;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 1px );
   -webkit-backdrop-filter: blur( 12.5px );
   border: 1px rgba( 255, 255, 255, 0.18 );
 }

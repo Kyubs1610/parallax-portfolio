@@ -109,15 +109,18 @@
           <section>
             <div class="contactme" id="contactme" >
               <h2> Contact Me</h2>
-             
-              <form class="form"> 
-                <input type="text" placeholder="NAME" class="input">
-                <input type="email" placeholder="EMAIL" class="input">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="MESSAGE" class="input"></textarea>
+              
+
+              <form class="form" action="" method="post"> 
+                <?php include 'email.php';  ?>
+                <input type="text" placeholder="NAME" class="input" name="name">
+                <input type="email" placeholder="EMAIL" class="input" name="email">
+                <input type="subject" placeholder="SUBJECT" class="input" name="subject">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="MESSAGE" class="input" name="message"></textarea>
                 <button type="submit" class="night-mode"> Send </button>
 
               </form>
-              
+             
             </div>
              
           </section>
@@ -132,6 +135,8 @@
 
  
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/css-doodle@0.34.6/css-doodle.min.js"></script>
+  
   <script src="script.js"></script>
 </body>
 </html>
