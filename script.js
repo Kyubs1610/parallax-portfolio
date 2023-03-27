@@ -8,6 +8,7 @@
     let about = document.querySelector(".light");
     let treenight = document.querySelector(".treenight");
     let tree = document.querySelector(".tree");
+    let buttons = document.querySelectorAll("button");
   
       
     if (moon.style.display === 'block') {
@@ -19,12 +20,17 @@
       body.style.backgroundColor = '#33100E';
       document.querySelector(".sec").style.backgroundColor = '#33100E';
       body.classList.remove("dark-mode");
+      // Remove the night-mode class from all buttons
+    buttons.forEach(button => {
+      button.classList.remove("night-mode");
+    });
       about.addEventListener('mouseenter', () => {
         cursor.style.display = 'none';
       });
       about.addEventListener('mouseleave', () => {
         cursor.style.display = 'none';
       });
+      
     } else {
       sun.style.display = 'none';
       bird.style.display = 'none';
@@ -34,7 +40,11 @@
       body.style.backgroundColor = '#03000B';
       document.querySelector(".sec").style.backgroundColor = '#03000B';
       body.classList.add("dark-mode");
-  
+      
+      // Add the night-mode class to all buttons
+    buttons.forEach(button => {
+      button.classList.add("night-mode");
+    });
       // Show cursor when hovering over the .about section
       about.addEventListener('mouseenter', () => {
         cursor.style.display = 'block';
@@ -42,6 +52,7 @@
       about.addEventListener('mouseleave', () => {
         cursor.style.display = 'none';
       });
+      
     }
   }
 

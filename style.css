@@ -171,10 +171,19 @@ section .tree, section .treenight{
   margin: auto;
   
  }
+ body:not(.dark-mode) button.night-mode {
+  background-color: #2A4538;
+  color: #ffffff;
+}
+
+body:not(.dark-mode) button.night-mode:hover {
+  background-color: #FDCA71;
+  color: #000000;
+}
 
  button{
-  background-color: #fff;
-  color: #000000;
+  background-color: #2A4538;
+  color: #ffffff;
   padding: 0.5rem;
   margin: 1rem;
   border: none; 
@@ -182,15 +191,24 @@ section .tree, section .treenight{
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 button:hover{
- background-color: transparent;
- color: #fff;
- box-shadow: #fff 0 0 10px;
+ background-color: #FDCA71;
+ color: #000000;
  fill: #fff;
 }
 
 button a:hover{
   color: #fff;
   fill: #fff;
+}
+
+button.night-mode {
+  background-color: #081574;
+  color: #ffffff;
+    
+}
+button.night-mode:hover {
+    background-color: #FBA3A7;
+    color: #ffffff;
 }
 
  .cursor{
@@ -202,7 +220,7 @@ button a:hover{
   height: 15px;
   border-radius: 50%;
   background: #fff;
-  transition: 0.1s;
+  transition: transform 0.1s ease-in-out;
   transform: translate(-50%, -50%);
   pointer-events: none;
   mix-blend-mode: difference;
@@ -464,7 +482,7 @@ a:hover{
 
 
 .navbutton button:hover svg {
-  fill: #fff;
+  fill: black;
 }
 .form{
   display: flex;
