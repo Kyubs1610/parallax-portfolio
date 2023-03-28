@@ -546,7 +546,8 @@ header{
     display:flex;
     flex-direction: column;
     align-items: center;
-     
+    gap:30px;
+         
     }
   .hamburger{
     display: block;
@@ -559,23 +560,28 @@ header{
     height: 30px;
     width: 30px;
   }  
-
+  
   header{
     background: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     border: none;
+   
   }
 
  .nav ul li a {
   font-size: 1em;
   margin-left: -500px;
   transition: all 1s ease-in-out;
+  position: absolute;
+  right: 1rem;
   
  }
 
+
  .mobile-menu ul li a{
   margin-left: 0px;
+  
   
  }
 
