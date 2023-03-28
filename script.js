@@ -83,13 +83,13 @@
   })
 
  // Scroll reveal animation for the 2nd section 
-  ScrollReveal().reveal('.light h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500 });
-  ScrollReveal().reveal('.buttoncv',  { origin:'left',distance:'600px',delay: 1200, duration: 1500 });
-  ScrollReveal().reveal('.work h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500 });
-  ScrollReveal().reveal('.contactme h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500 });
-  ScrollReveal().reveal('.about p', {origin:'right', distance:'500px',delay: 1000, duration: 1500 });
-  ScrollReveal().reveal('.container', { delay: 600, duration: 1500 });
-  ScrollReveal().reveal('footer', { origin:'bottom', delay: 600, duration: 1500 });
+  ScrollReveal().reveal('.light h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500, mobile: true });
+  ScrollReveal().reveal('.buttoncv',  { origin:'left',distance:'600px',delay: 1200, duration: 1500,mobile: true });
+  ScrollReveal().reveal('.work h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500,mobile: true });
+  ScrollReveal().reveal('.contactme h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500,mobile: true });
+  ScrollReveal().reveal('.about p', {origin:'right', distance:'500px', delay: 1000, duration: 1500,mobile: false });
+  ScrollReveal().reveal('.container', { delay: 600, duration: 1500,mobile: true });
+  ScrollReveal().reveal('footer', { origin:'bottom', delay: 600, duration: 1500,mobile: true });
   
 
  
