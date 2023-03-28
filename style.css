@@ -571,11 +571,8 @@ header{
 
  .nav ul li a {
   font-size: 1em;
-  margin-left: -500px;
   transition: all 1s ease-in-out;
-  position: absolute;
-  right: 1rem;
-  
+  margin-left: -500px;
  }
 
 
