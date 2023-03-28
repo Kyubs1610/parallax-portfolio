@@ -9,10 +9,14 @@
     let treenight = document.querySelector(".treenight");
     let tree = document.querySelector(".tree");
     let buttons = document.querySelectorAll("button");
+    let bgMobile = document.querySelector(".bgmobile");
+    let bgNightMobile = document.querySelector(".bgmobilenight");
   
       
     if (moon.style.display === 'block') {
       moon.style.display = 'none';
+      bgMobile.style.display = 'block';
+      bgNightMobile.style.display = 'none';
       sun.style.display = 'block';
       bird.style.display = 'block';
       tree.style.display = 'block';
@@ -33,6 +37,8 @@
       
     } else {
       sun.style.display = 'none';
+      bgMobile.style.display = 'none';
+      bgNightMobile.style.display = 'block';
       bird.style.display = 'none';
       moon.style.display = 'block';
       tree.style.display = 'none';
@@ -140,5 +146,9 @@ window.addEventListener("scroll", function () {
     }
 });
 
+const menuHamburger = document.querySelector(".hamburger")
+const navLinks = document.querySelector(".nav")
 
-
+menuHamburger.addEventListener('click',()=>{
+navLinks.classList.toggle('mobile-menu')
+})
