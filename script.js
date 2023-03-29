@@ -1,4 +1,6 @@
-  // dark mode function
+  // dark mode function 
+
+  //Desktop and tablet version
   
   function myFunction() {
     let moon = document.querySelector(".moon");
@@ -105,7 +107,7 @@
     buttons.forEach(button => {
       button.classList.add("night-mode");
     });
-      // Show cursor when hovering over the .about section
+      // Show cursor when hovering over the .about section during dark mode
       about.addEventListener('mouseenter', () => {
         cursor.style.display = 'block';
       });
