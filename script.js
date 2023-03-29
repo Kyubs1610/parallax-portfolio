@@ -9,14 +9,10 @@
     let treenight = document.querySelector(".treenight");
     let tree = document.querySelector(".tree");
     let buttons = document.querySelectorAll("button");
-    let bgMobile = document.querySelector(".bgmobile");
-    let bgNightMobile = document.querySelector(".bgmobilenight");
-  
-      
+    let bird = document.querySelector(".bird");
+ 
     if (moon.style.display === 'block') {
       moon.style.display = 'none';
-      bgMobile.style.display = 'block';
-      bgNightMobile.style.display = 'none';
       sun.style.display = 'block';
       bird.style.display = 'block';
       tree.style.display = 'block';
@@ -25,9 +21,9 @@
       document.querySelector(".sec").style.backgroundColor = '#33100E';
       body.classList.remove("dark-mode");
       // Remove the night-mode class from all buttons
-    buttons.forEach(button => {
+      buttons.forEach(button => {
       button.classList.remove("night-mode");
-    });
+      });
       about.addEventListener('mouseenter', () => {
         cursor.style.display = 'none';
       });
@@ -37,8 +33,6 @@
       
     } else {
       sun.style.display = 'none';
-      bgMobile.style.display = 'none';
-      bgNightMobile.style.display = 'block';
       bird.style.display = 'none';
       moon.style.display = 'block';
       tree.style.display = 'none';
@@ -46,7 +40,9 @@
       body.style.backgroundColor = '#03000B';
       document.querySelector(".sec").style.backgroundColor = '#03000B';
       body.classList.add("dark-mode");
-      
+    
+
+
       // Add the night-mode class to all buttons
     buttons.forEach(button => {
       button.classList.add("night-mode");
@@ -62,10 +58,78 @@
     }
   }
 
-  document.getElementById("checkbox").onclick = function() {
-    myFunction()
-  };
-  
+  function myMobileFunction (){
+    let bgMobile = document.querySelector(".bgmobile");
+    let bgNightMobile = document.querySelector(".bgmobilenight");
+    let body = document.querySelector("body");
+    let cursor = document.querySelector(".cursor");
+    let about = document.querySelector(".light");
+    let treenight = document.querySelector(".treenight");
+    let tree = document.querySelector(".tree");
+    let buttons = document.querySelectorAll("button");
+    let bird = document.querySelector(".bird");
+ 
+    if (bgNightMobile.style.display === 'block') {
+      bgNightMobile.style.display = 'none';
+      bgMobile.style.display = 'block';
+      bird.style.display = 'block';
+      tree.style.display = 'none';
+      treenight.style.display = 'none';
+      body.style.backgroundColor = '#33100E';
+      document.querySelector(".sec").style.backgroundColor = '#33100E';
+      body.classList.remove("dark-mode");
+      // Remove the night-mode class from all buttons
+      buttons.forEach(button => {
+      button.classList.remove("night-mode");
+      });
+      about.addEventListener('mouseenter', () => {
+        cursor.style.display = 'none';
+      });
+      about.addEventListener('mouseleave', () => {
+        cursor.style.display = 'none';
+      });
+      
+    } else {
+      bgMobile.style.display = 'none';
+      bird.style.display = 'none';
+      bgNightMobile.style.display = 'block';
+      tree.style.display = 'none';
+      treenight.style.display = 'none';
+      body.style.backgroundColor = '#03000B';
+      document.querySelector(".sec").style.backgroundColor = '#03000B';
+      body.classList.add("dark-mode");
+    
+
+
+      // Add the night-mode class to all buttons
+    buttons.forEach(button => {
+      button.classList.add("night-mode");
+    });
+      // Show cursor when hovering over the .about section
+      about.addEventListener('mouseenter', () => {
+        cursor.style.display = 'block';
+      });
+      about.addEventListener('mouseleave', () => {
+        cursor.style.display = 'none';
+      });
+      
+    }}
+
+  function checkScreenSize() {
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      // mobile screens
+      document.getElementById("checkbox").removeEventListener("click", myFunction);
+      document.getElementById("checkbox").addEventListener("click", myMobileFunction);
+    } else {
+      // desktop and tablet screens
+      document.getElementById("checkbox").removeEventListener("click", myMobileFunction);
+      document.getElementById("checkbox").addEventListener("click", myFunction);
+    }
+  }
+  // call checkScreenSize function on page load and when the window size changes
+window.addEventListener("load", checkScreenSize);
+window.addEventListener("resize", checkScreenSize);
+
   // Scroll animation for the 1st section
   let texte = document.querySelector(".title");
   let tree = document.querySelector(".tree");
