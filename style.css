@@ -167,7 +167,7 @@ section .tree, section .treenight{
   justify-content: center;
   align-items: center;
   width: 60%;
-  margin: auto;
+  margin: 0.5rem auto;
   
   
  }
@@ -496,7 +496,7 @@ a:hover{
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   width: 100%;
- 
+  margin: 2rem auto;
   
 }
 input, 
@@ -628,7 +628,7 @@ header{
   
  }
 
- .work{
+ .work,.contactme{
 margin: 0.5rem auto;
  }
 
@@ -640,10 +640,6 @@ margin: 0.5rem auto;
   margin: 10px ;
   padding: 5px 5px;
   resize: none;
- }
-
- .contactme{
-  margin: auto;
  }
 
  .form{
