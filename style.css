@@ -542,7 +542,8 @@ header{
 }
 
 @media screen and (min-width: 319px) and (max-width: 767px){
- 
+
+
   header ul {
     display:flex;
     flex-direction: column;

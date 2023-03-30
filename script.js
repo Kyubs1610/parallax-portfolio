@@ -64,8 +64,6 @@
     let bgMobile = document.querySelector(".bgmobile");
     let bgNightMobile = document.querySelector(".bgmobilenight");
     let body = document.querySelector("body");
-    let cursor = document.querySelector(".cursor");
-    let about = document.querySelector(".light");
     let treenight = document.querySelector(".treenight");
     let tree = document.querySelector(".tree");
     let buttons = document.querySelectorAll("button");
@@ -74,7 +72,7 @@
     if (bgNightMobile.style.display === 'block') {
       bgNightMobile.style.display = 'none';
       bgMobile.style.display = 'block';
-      bird.style.display = 'block';
+      bird.style.display = 'none';
       tree.style.display = 'none';
       treenight.style.display = 'none';
       body.style.backgroundColor = '#33100E';
@@ -84,12 +82,7 @@
       buttons.forEach(button => {
       button.classList.remove("night-mode");
       });
-      about.addEventListener('mouseenter', () => {
-        cursor.style.display = 'none';
-      });
-      about.addEventListener('mouseleave', () => {
-        cursor.style.display = 'none';
-      });
+
       
     } else {
       bgMobile.style.display = 'none';
@@ -107,13 +100,7 @@
     buttons.forEach(button => {
       button.classList.add("night-mode");
     });
-      // Show cursor when hovering over the .about section during dark mode
-      about.addEventListener('mouseenter', () => {
-        cursor.style.display = 'block';
-      });
-      about.addEventListener('mouseleave', () => {
-        cursor.style.display = 'none';
-      });
+  
       
     }}
 
@@ -144,12 +131,12 @@ window.addEventListener("resize", checkScreenSize);
     sun.style.top = value * 0.5 + 'px';
     moon.style.top = value * 0.5 + 'px';
     tree.style.top = value * 0 + 'px';
-    bird.style.marginLeft = value * 4 + 'px';
+    bird.style.marginLeft = value * 3 + 'px';
     texte.style.marginRight = value * 4 + 'px';
   })
 
  // Scroll reveal animation for the 2nd section 
-  ScrollReveal().reveal('.light h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500, mobile: true });
+  ScrollReveal().reveal('.light h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500, mobile: true});
   ScrollReveal().reveal('.buttoncv',  { origin:'left',distance:'600px',delay: 1200, duration: 1500,mobile: true });
   ScrollReveal().reveal('.work h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500,mobile: true });
   ScrollReveal().reveal('.contactme h2',  { origin:'left',distance:'300px',delay: 600, duration: 1500,mobile: true });
